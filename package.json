@@ -1,0 +1,35 @@
+{
+    "name": "pinyin-string",
+    "version": "0.0.1",
+    "description": "Convert chinese to pinyin string.",
+    "main": "pinyin.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/poppinlp/node-pinyin-string"
+    },
+    "bugs": {
+        "url": "https://github.com/poppinlp/node-pinyin-string/issues"
+    },
+    "author": {
+        "name": "PoppinL",
+        "email": "poppinlp@gmail.com",
+        "url": "http://poppinlp.github.io"
+    },
+    "license": "MIT",
+    "readmeFilename": "README.md",
+    "engines": {
+        "node": ">= 0.8.0"
+    },
+    "dependencies": {
+        "pinyin": ">=2.3.3"
+    },
+    "keywords": [
+        "node",
+        "nodejs",
+        "chinese",
+        "pinyin"
+    ],
+    "scripts": {
+        "test": "node demo.js"
+    }
+}
