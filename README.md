@@ -1,8 +1,8 @@
 # node-pinyin-string
 
-[![Build Status](https://travis-ci.org/poppinlp/node-dir-to-pattern.svg?branch=master)](https://travis-ci.org/poppinlp/node-dir-to-pattern)
-[![Dependency Status](https://david-dm.org/poppinlp/node-dir-to-pattern.svg)](https://david-dm.org/poppinlp/node-dir-to-pattern)
-[![devDependency Status](https://david-dm.org/poppinlp/node-dir-to-pattern/dev-status.svg)](https://david-dm.org/poppinlp/node-dir-to-pattern#info=devDependencies)
+[![Build Status](https://travis-ci.org/poppinlp/node-pinyin-string.svg?branch=master)](https://travis-ci.org/poppinlp/node-pinyin-string)
+[![Dependency Status](https://david-dm.org/poppinlp/node-pinyin-string.svg)](https://david-dm.org/poppinlp/node-pinyin-string)
+[![devDependency Status](https://david-dm.org/poppinlp/node-pinyin-string/dev-status.svg)](https://david-dm.org/poppinlp/node-pinyin-string#info=devDependencies)
 
 将中文的汉字转化成拼音字符串。
 
