@@ -1,35 +1,37 @@
 {
-    "name": "pinyin-string",
-    "version": "0.0.1",
-    "description": "Convert chinese to pinyin string.",
-    "main": "pinyin.js",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/poppinlp/node-pinyin-string"
-    },
-    "bugs": {
-        "url": "https://github.com/poppinlp/node-pinyin-string/issues"
-    },
-    "author": {
-        "name": "PoppinL",
-        "email": "poppinlp@gmail.com",
-        "url": "http://poppinlp.github.io"
-    },
-    "license": "MIT",
-    "readmeFilename": "README.md",
-    "engines": {
-        "node": ">= 0.8.0"
-    },
-    "dependencies": {
-        "pinyin": ">=2.3.3"
-    },
-    "keywords": [
-        "node",
-        "nodejs",
-        "chinese",
-        "pinyin"
-    ],
-    "scripts": {
-        "test": "node demo.js"
-    }
+	"name": "pinyin-string",
+	"version": "1.0.0",
+	"description": "Convert chinese to pinyin string.",
+	"main": "pinyin.js",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/poppinlp/node-pinyin-string"
+	},
+	"bugs": {
+		"url": "https://github.com/poppinlp/node-pinyin-string/issues"
+	},
+	"author": {
+		"name": "PoppinL",
+		"email": "poppinlp@gmail.com",
+		"url": "http://poppinlp.com"
+	},
+	"license": "MIT",
+	"readmeFilename": "README.md",
+	"engines": {
+		"node": ">= 4.0.0"
+	},
+	"dependencies": {
+		"pinyin": "^2.8.3"
+	},
+	"keywords": ["chinese", "pinyin", "中文", "拼音", "汉字", "汉语"],
+	"scripts": {
+		"lint": "eslint .",
+		"test": "npm run lint && node tests/demo.js"
+	},
+	"devDependencies": {
+		"eslint": "^4.18.2",
+		"eslint-config-handsome": "^0.4.1",
+		"eslint-config-prettier": "^2.9.0",
+		"prettier": "^1.11.1"
+	}
 }

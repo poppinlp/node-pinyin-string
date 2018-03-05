@@ -1,121 +1,65 @@
 # node-pinyin-string
 
-[![Build Status](https://travis-ci.org/poppinlp/node-pinyin-string.svg?branch=master)](https://travis-ci.org/poppinlp/node-pinyin-string)
-[![Dependency Status](https://david-dm.org/poppinlp/node-pinyin-string.svg)](https://david-dm.org/poppinlp/node-pinyin-string)
-[![devDependency Status](https://david-dm.org/poppinlp/node-pinyin-string/dev-status.svg)](https://david-dm.org/poppinlp/node-pinyin-string#info=devDependencies)
+[![Build Status][ci-img]][ci-url]
+[![Code style][lint-img]][lint-url]
+[![Dependency Status][dep-img]][dep-url]
+[![Dev Dependency Status][dev-dep-img]][dev-dep-url]
+[![NPM version][npm-ver-img]][npm-url]
+[![NPM downloads][npm-dl-img]][npm-url]
+[![NPM license][npm-lc-img]][npm-url]
 
 将中文的汉字转化成拼音字符串。
 
 ## 特性
 
-- 根据词组智能匹配最正确的拼音。
-- 支持多音字。
-- 简单的繁体支持。
-- 支持多种不同拼音风格。
+* 将汉字转化为拼音字符串
 
 ## 安装
 
-via npm:
+通过 npm:
 
 ```shell
-npm install pinyin
+npm i node-pinyin-string
 ```
 
-via spm3:
+通过 yarn:
 
 ```shell
-spm install pinyin
+yarn add node-pinyin-string
 ```
 
 ## 用法
 
-开发者：
+```js
+const pinyin = require(“pinyin-string”);
+console.log(pinyin('你好')); // nǐhǎo
+```
+
+## 参数
+
+**这个包的汉字识别功能依赖于[这个项目](http://spmjs.io/docs/pinyin/)，所有的参数会透传过去，具体参数的含义可以移步那边查阅。**
+
+### sep <string>
+
+设置合并成字符串时候的分隔符，例如：
 
 ```js
-var pinyin = require(“pinyin”);
-
-console.log(pinyin(“中心”));    // [ [ ‘zhōng’ ], [ ‘xīn’ ] ]
-console.log(pinyin(“中心”, {
-    heteronym: true               // 启用多音字模式
-}));                            // [ [ ‘zhōng’, ‘zhòng’ ], [ ‘xīn’ ] ]
-console.log(pinyin(“中心”, {
-    style: pinyin.STYLE_INITIALS, // 设置拼音风格
-    heteronym: true
-}));                            // [ [ ‘zh’ ], [ ‘x’ ] ]
+pinyin('加一下分隔符吧，不然好奇怪呀思密达', {
+	style: pinyin.STYLE_NORMAL,
+	sep: ' '
+});
+// jia yi xia fen ge fu ba ， bu ran hao qi guai ya si mi da
 ```
 
-命令行：
-
-```shell
-$ pinyin 中心
-zhōng xīn
-$ pinyin -h
-```
-
-## API
-
-### 方法 `<Array> pinyin(words[, options])`
-
-将传入的中文字符串(words)转换成拼音符号串。
-
-options 是可选的，可以设定拼音风格，或打开多音字选项。
-
-返回二维数组，第一维每个数组项位置对应每个中文字符串位置。 第二维是各个汉字的读音列表，多音字会有多个拼音项。
-
-### 参数 `<Boolean> options.heteronym`
-
-是否启用多音字模式，默认关闭。
-
-关闭多音字模式时，返回每个汉字第一个匹配的拼音。
-
-启用多音字模式时，返回多音字的所有拼音列表。
-
-### 参数 `<String> options.sep`
-
-字符串中用于分隔拼音的分隔符，默认为空字符串。
-
-### 参数 `<Object> options.style`
-
-指定拼音 风格。可以通过以下几种 `STYLE_` 开头的静态属性进行指定。
-
-### 静态属性 `.STYLE_NORMAL`
-
-普通风格，即不带音标。
-
-如：pin yin
-
-### 静态属性 `.STYLE_TONE`
-
-声调风格，拼音声调在韵母第一个字母上。
-
-注：这是默认的风格。
-
-如：`pīn yīn`
-
-### 静态属性 `.STYLE_TONE2`
-
-声调风格2，即拼音声调在各个拼音之后，用数字 [0-4] 进行表示。
-
-如：`pin1 yin1`
-
-### 静态属性 `.STYLE_INITIALS`
-
-声母风格，只返回各个拼音的声母部分。
-
-如：`中国` 的拼音 `zh g`
-
-例外，对于只有韵母的汉字（如『爱、啊』等），会先转成不带音标的普通风格。
-
-### 静态属性 `.STYLE_FIRST_LETTER`
-
-首字母风格，只返回拼音的首字母部分。
-
-如：`p y`
-
-## Test
-
-```shell
-npm test
-```
-
-__本包的汉字识别功能依赖于[这个包](http://spmjs.io/docs/pinyin/)，感谢其开发者。__
+[ci-img]: https://img.shields.io/travis/poppinlp/node-pinyin-string.svg?style=flat-square
+[ci-url]: https://travis-ci.org/poppinlp/node-pinyin-string
+[lint-img]: https://img.shields.io/badge/code%20style-handsome-brightgreen.svg?style=flat-square
+[lint-url]: https://github.com/poppinlp/eslint-config-handsome
+[dep-img]: https://img.shields.io/david/poppinlp/node-pinyin-string.svg?style=flat-square
+[dep-url]: https://david-dm.org/poppinlp/node-pinyin-string
+[dev-dep-img]: https://img.shields.io/david/dev/poppinlp/node-pinyin-string.svg?style=flat-square
+[dev-dep-url]: https://david-dm.org/poppinlp/node-pinyin-string#info=devDependencies
+[npm-ver-img]: https://img.shields.io/npm/v/node-pinyin-string.svg?style=flat-square
+[npm-dl-img]: https://img.shields.io/npm/dm/node-pinyin-string.svg?style=flat-square
+[npm-lc-img]: https://img.shields.io/npm/l/node-pinyin-string.svg?style=flat-square
+[npm-url]: https://www.npmjs.com/package/node-pinyin-string
