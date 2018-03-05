@@ -59,7 +59,7 @@ pinyin('加一下分隔符吧，不然好奇怪呀思密达', {
 [dep-url]: https://david-dm.org/poppinlp/node-pinyin-string
 [dev-dep-img]: https://img.shields.io/david/dev/poppinlp/node-pinyin-string.svg?style=flat-square
 [dev-dep-url]: https://david-dm.org/poppinlp/node-pinyin-string#info=devDependencies
-[npm-ver-img]: https://img.shields.io/npm/v/node-pinyin-string.svg?style=flat-square
-[npm-dl-img]: https://img.shields.io/npm/dm/node-pinyin-string.svg?style=flat-square
-[npm-lc-img]: https://img.shields.io/npm/l/node-pinyin-string.svg?style=flat-square
-[npm-url]: https://www.npmjs.com/package/node-pinyin-string
+[npm-ver-img]: https://img.shields.io/npm/v/pinyin-string.svg?style=flat-square
+[npm-dl-img]: https://img.shields.io/npm/dm/pinyin-string.svg?style=flat-square
+[npm-lc-img]: https://img.shields.io/npm/l/pinyin-string.svg?style=flat-square
+[npm-url]: https://www.npmjs.com/package/pinyin-string
